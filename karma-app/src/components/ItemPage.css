@@ -1,0 +1,460 @@
+/* ItemPage.css */
+.items-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+  color: #2c3e50;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Styles - FIXED ALIGNMENT */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #2e8b57;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+ .page-title {
+  color: #0a2351;
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 400;
+  font-family: 'Dancing Script', 'Brush Script MT', cursive;
+  letter-spacing: 0.5px;
+}
+
+/* .page-title {
+  color: #0a2351;
+  font-size: 2.3rem;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'Segoe Script', 'Monotype Corsiva', cursive;
+  position: relative;
+  padding: 5px 20px;
+}
+
+.page-title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  z-index: -1;
+  transform: rotate(-1deg);
+  box-shadow: 0 3px 10px rgba(46, 139, 87, 0.2);
+} */
+.search-info {
+  background-color: #e8f5e9;
+  color: #2e8b57;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Search Bar */
+.search-container {
+  position: relative;
+  width: 250px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 2px solid #0a2351;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(10, 35, 81, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2e8b57;
+  box-shadow: 0 0 0 3px rgba(46, 139, 87, 0.2);
+}
+
+.search-input::placeholder {
+  color: #7b8a8b;
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #0a2351;
+  cursor: pointer;
+  padding: 0.25rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+}
+
+.clear-search-btn:hover {
+  background-color: #e8f5e9;
+  color: #2e8b57;
+}
+
+/* Buttons */
+.add-btn {
+  background: linear-gradient(135deg, #0a2351 0%, #2e8b57 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(10, 35, 81, 0.2);
+  white-space: nowrap;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(10, 35, 81, 0.3);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+}
+
+.clear-search-btn-large {
+  background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(46, 139, 87, 0.2);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Table Container */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(10, 35, 81, 0.1);
+  border: 1px solid #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table thead {
+  background: linear-gradient(135deg, #0a2351 0%, #1a5276 100%);
+}
+
+.table th {
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  height: 60px;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+.table tbody tr {
+  height: 70px;
+  border-bottom: 1px solid #e8f5e9;
+  transition: background-color 0.2s ease;
+}
+
+.table tbody tr:hover {
+  background-color: #f1f8e9;
+}
+
+.table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table td {
+  padding: 1rem;
+  color: #2c3e50;
+  border: none;
+  vertical-align: middle;
+  height: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.id-cell {
+  color: #0a2351;
+  font-weight: 600;
+  width: 80px;
+}
+
+.name-cell {
+  font-weight: 500;
+  color: #2c3e50;
+  width: 25%;
+}
+
+.desc-cell {
+  color: #546e7a;
+  width: 45%;
+}
+
+.actions {
+  width: 180px;
+  min-width: 180px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.update-btn {
+  background-color: #e8f5e9;
+  color: #2e8b57;
+  border: 2px solid #2e8b57;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: 70px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.update-btn:hover {
+  background-color: #2e8b57;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.delete-btn {
+  background-color: #ffebee;
+  color: #e53935;
+  border: 2px solid #e53935;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  min-width: 70px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.delete-btn:hover {
+  background-color: #e53935;
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid #e8f5e9;
+  border-top: 4px solid #2e8b57;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading p {
+  color: #0a2351;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  border: 2px dashed #e8f5e9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #0a2351;
+}
+
+.empty-title {
+  color: #0a2351;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.empty-subtitle {
+  color: #7b8a8b;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .items-page {
+    padding: 1rem;
+  }
+  
+  .page-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .header-left {
+    justify-content: space-between;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .header-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-container {
+    width: 100%;
+  }
+  
+  .add-btn {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .table {
+    display: block;
+    overflow-x: auto;
+    table-layout: auto;
+  }
+  
+  .table th,
+  .table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+    height: auto;
+  }
+  
+  .actions {
+    width: auto;
+    min-width: auto;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .update-btn,
+  .delete-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+/* Desktop-specific optimizations */
+@media (min-width: 769px) {
+  .table {
+    table-layout: fixed;
+  }
+}
+
+/* Fallback fonts for cursive */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&family=Great+Vibes&display=swap');
+
+/* Alternative cursive styles - uncomment the one you prefer */
+/*
+.page-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.8rem;
+  font-weight: 600;
+}
+
+.page-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+*/
